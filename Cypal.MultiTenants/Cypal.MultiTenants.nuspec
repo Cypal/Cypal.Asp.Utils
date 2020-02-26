@@ -1,0 +1,28 @@
+﻿<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Cypal.MultiTenants</id>
+    <version>1.0.0</version>
+    <title>Cypal Multi Tenants</title>
+    <authors>Prakash G.R.</authors>
+    <owners>Cypal</owners>
+    <projectUrl></projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>\LICENSE.txt</licenseUrl>
+    <summary>
+      A 'Tenant' is the basic customization you do on your product. In a typical SaaS Project, you may want to "White Label" you product by hosting you app in a single server and customize the content based on the host name in the Request's URL.
+      </summary>
+    <description>
+      A 'Tenant' is the basic customization you do on your product. In a typical SaaS Project, you may want to "White Label" you product by hosting you app in a single server and customize the content based on the host name in the Request's URL.
+    </description>
+    <copyright>© 2020 Cypal Solutions</copyright>
+    <tags>Cypal, ASPNET, ASP Core, Multi Tenant, Tenants, SaaS</tags>
+    <releaseNotes>
+      
+      1.0.0
+
+      Initial Version
+
+    </releaseNotes>
+  </metadata>
+</package>
