@@ -7,5 +7,6 @@ This repo contains some of the code I wrote while learning ASP Core. (If you are
 ## Multi-Tenants
 
 In a typical SaaS Project, you may want to "White Label" you product. Essentially brand your product based on the Customer. In that case, instead of branching out code for every brand you support, its better to maintain a single branch for all the code. It is easier for maintenance. Even during deployment, it is easier and cheaper, to deploy to a single App Server and serve all the brands via separate URLs. In the code, you can identify each "tenant" via the URL and brand the page accordingly (or customize a feature). This library helps you to provide multi-tenant support in an ASP Core application.
+[More Details](Cypal.MultiTenants/README.md)
 
 
