@@ -36,7 +36,7 @@ public class Startup
 Configuration
 -----
 
-    You need to define the list of tenants, and the supported URLs in your appsettings.json (or the Azure Configuration or other supported places). The set up is typically like:
+You need to define the list of tenants, and the supported URLs in your appsettings.json (or the Azure Configuration or other supported places). The set up is typically like:
 
 ```json
 {
@@ -72,7 +72,7 @@ Configuration
 Usage
 -----
 
-    Once you have added the tenants in your configuration, the right Tenant object will be selected based on the Request's URL and will be injected into the objects you use (Service classes, CSHTML Models, CSHTML pages, etc). If the host name in the Request URL doesn't match any of the host names mentioned in the 'hosts' property of any of the Tenant, then the Tenant with "isDefault" with value of 'true' will be returned.
+Once you have added the tenants in your configuration, the right Tenant object will be selected based on the Request's URL and will be injected into the objects you use (Service classes, CSHTML Models, CSHTML pages, etc). If the host name in the Request URL doesn't match any of the host names mentioned in the 'hosts' property of any of the Tenant, then the Tenant with "isDefault" with value of 'true' will be returned.
 
 ```csharp
 public class MyService
@@ -89,7 +89,7 @@ public class MyService
 Background Threads
 ------------------
 
-    If you want to execute any specific Background jobs, which may not have the Request or Http context, then you need to explicitly configure the 'CurrentHost' in your app setting. This is because there is no way to identify the URL of the hosted domain in the .Net Core's Startup class. (it was earlier possible with regular .Net though):
+If you want to execute any specific Background jobs, which may not have the Request or Http context, then you need to explicitly configure the 'CurrentHost' in your app setting. This is because there is no way to identify the URL of the hosted domain in the .Net Core's Startup class. (it was earlier possible with regular .Net though):
 
 ```json
 {
@@ -99,11 +99,11 @@ Background Threads
 }
 ```
 
-    When you configure this way, the first priority is still to detect the Tenant from the Request object. When it fails for any reason (when the background thread doesn't have a HTTP context), then the host name from CurrentHost configuration will be used as a fall back.
+When you configure this way, the first priority is still to detect the Tenant from the Request object. When it fails for any reason (when the background thread doesn't have a HTTP context), then the host name from CurrentHost configuration will be used as a fall back.
 
 Custom Settings
 -----------------
-    If you want to have any settigs that changes with each tenant, you can add them in the 'settings' section of your config file. All the settings are available as a Dictonary in the Tenant object. Although you can directly use the Dictonary or the Setting & IntSetting methods, I highly recommend to create extension methods for each settings:
+If you want to have any settigs that changes with each tenant, you can add them in the 'settings' section of your config file. All the settings are available as a Dictonary in the Tenant object. Although you can directly use the Dictonary or the Setting & IntSetting methods, I highly recommend to create extension methods for each settings:
 
 ```csharp
 public static class TenantExtensions
