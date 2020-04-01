@@ -10,3 +10,7 @@ In a typical SaaS Project, you may want to "White Label" you product. Essentiall
 [More Details](Cypal.MultiTenants/README.md)
 
 
+# Tag-Helpers
+
+Role based authorization is a powerful model in ASP Core to restrict who does what. This is applied at a Razor Page or Controller level. There is no simpler way of providing the similar access to individual controls. This library aims to provide Role based controlls for the individual form fields.
+[More Details](Cypal.TagHelpers/README.md)
